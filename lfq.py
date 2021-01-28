@@ -13,17 +13,21 @@ import requests
 from selenium import webdriver
 
 
-url = 'https://www.energy.ca.gov/contact/commissioners-offices-and-divisions-contacts/staff-directory' 
+url = 'https://www.citrusheights.net/Directory.aspx' 
 
-driver = webdriver.Chrome(executable_path = '/Lord Farquaad/chromedriver')
+driver = webdriver.Chrome(executable_path = 'C://Users//icarus44_zer0//Documents//GitHub//Lord-Farquaad//chromedriver.exe')
 
 browser = webdriver.Chrome()
 browser.get(url)
 
-xpath = '//*[@id="directory"]/tbody/tr[1]/td[1]/a'
-
+xpath = '//*[@id="directory_filter"]/label/input'
 element = browser.find_element_by_xpath(xpath)
 
-element.click()
+xpath = '//*[@id="directory"]/tbody/tr[1]/td[1]/a'
+element = browser.find_element_by_xpath(xpath)
 
+element.click() 
 
+# element.copy()
+
+# print(element)
